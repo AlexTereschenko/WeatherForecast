@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background: #303030;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+}
+
+.unselectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+.weather {
+    margin: 0 auto;
+    width: 320px;
+    height: 568px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: clamp(1.2rem, 0.5vw + 1rem, 2rem);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.weather__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.weather__header__heading, .material-symbols-outlined.umbrella {
+    font-size: 2rem;
+}
+
+.weather__header__inputfield {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.weather__header__inputfield__input {
+    width: 80%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+}
+
+.weather__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.weather___city-info {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.weather__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.weather__info__temp {
+    font-size: 3.5rem;
+}
+
+.weather__info__main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* .weather__info__main__status {
+    text-transform: capitalize;
+} */
+
+.weather__info__main__icon {
+    background: url('http://openweathermap.org/img/wn/10d@2x.png') no-repeat 50% 50%;
+    background-color: #ffffff7b;
+    background-size: 4rem 4rem;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.weather__info__sun-lifespan__time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+
+
+
+
+
+.loading img {
+    max-width: 50%;
+}
+
+.hide {
+    display: none;
+}
+
+.btn--saved {
+    font-variation-settings: 'FILL' 1;
+}
+
+.btn {
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #000000;
+}
+
+.btn:active {
+    background: #555555;
+}
+
+.btn:hover::before, .btn--saved:hover::before {
+    font-family: 'Roboto Condensed', sans-serif;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    font-size: 0.8rem;
+    line-height: 1.2;
+    color: chocolate;
+}
+
+.btn:hover::before {
+    content: 'Set default city';
+}
+
+.btn--saved:hover::before {
+    content: 'Clear default city';
+}
+
+.weather__wind, .weather__wind__info {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.weather__wind {
+    flex-direction: row;
+    align-items: center;
+}
+
+.weather__wind__compass {
+    position: relative;
+    width: 61px;
+    height: 68px;
+}
+
+.weather__wind__info {
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.arrow {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) rotate(0);
+}
